@@ -1,0 +1,11 @@
+[Unit]
+Description= backend webapp
+[Service]
+WorkingDirectory=/root/asp.net/WebApplication1
+ExecStart=/usr/bin/dotnet /root/asp.net/WebApplication1/bin/Debug/netcoreapp3.1/publish/WebApplication1.dll   --urls=http://0.0.0.0:5000
+Restart=always
+RestartSec=10
+SyslogIdentifier=backend
+Environment=ASPNETCORE_ENVIRONMENT=Production
+[Install]
+WantedBy=multi-user.target

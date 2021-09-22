@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  react:
+    build: ./react-app
+    container_name: React
+    ports:
+      - "3000:3000"
+    depends_on:
+      - dotnet
+    environment:
+      - REACT_APP_API_URL=http://k3d.devpracon.tech:5000/api/
+      - REACT_APP_PHOTOS_URL=http://k3d.devpracon.tech:5000/Photos/
+  dotnet:
+    build: ./asp.net
+    container_name: DotNet
+    ports:
+      - "5000:80"  
+    depends_on:
+      - mysql
+#    environment:
+#      - DB_SOURCE=mysql
+#      - DB_NAME=dbo
+#      - DB_USER=root
+#      - MYSQL_ROOT_PASSWORD=password
+
+  mysql:
+    image: pradeep34946/mysql:v1
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
