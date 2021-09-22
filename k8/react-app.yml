@@ -142,7 +142,7 @@ spec:
           #       port:
           #         number: 3000
 
-          - path: /api/
+          - path: /api
             pathType: Prefix
             backend:
               service:
