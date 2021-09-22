@@ -83,44 +83,44 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-   labels:
-     app: frontend
-   name: frontend-deployment
+  labels:
+    app: frontend
+  name: frontend-deployment
 spec:
-   selector:
-     matchLabels:
-       app: frontend
-   template:
-      metadata:
-       labels:
-         app: frontend
-      spec:
-        containers:  
-          - image: pradeep34946/frontend:v6
-            name: frontend
-            env: 
-              - name: REACT_APP_API_URL
-                value: http://k3d.devpracon.tech:5000/api/
-              - name: REACT_APP_PHOTOS_URL
-                value: http://k3d.devpracon.tech:5000/Photos/
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:  
+      - image: pradeep34946/frontend:v6
+        name: frontend
+        env: 
+        - name: REACT_APP_API_URL
+          value: http://k3d.devpracon.tech:5000/api/
+        - name: REACT_APP_PHOTOS_URL
+          value: http://k3d.devpracon.tech:5000/Photos/
 
 ---
 
 apiVersion: v1
 kind: Service
 metadata:
-   labels:
-     app: frontend
-   name: frontend-service
+  labels:
+    app: frontend
+  name: frontend-service
 spec:
-   ports:
-     - name: http
-       port: 3000
-       targetPort: 3000
-       protocol: TCP
-   selector:
-     app: frontend
-   type: ClusterIP
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+      protocol: TCP
+  selector:
+    app: frontend
+  type: ClusterIP
 
 ---
 
