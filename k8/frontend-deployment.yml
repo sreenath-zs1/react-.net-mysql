@@ -14,8 +14,8 @@ spec:
         app: frontend
     spec:
       containers:  
-         - image: pradeep34946/frontend:v6
-           name: frontend
-           env: 
-            - name: BACKEND_API
-              value: my_app.devpracon.tech
+      - image: pradeep34946/frontend:v6
+        name: frontend
+        env: 
+        - name: BACKEND_API
+          value: my_app.devpracon.tech
