@@ -9,7 +9,7 @@ services:
     depends_on:
       - dotnet
     environment:
-      - BACKEND_IP=k3d.devpracon.tech
+      - BACKEND_IP=3.222.240.172
   dotnet:
     build: ./asp.net
     container_name: DotNet
