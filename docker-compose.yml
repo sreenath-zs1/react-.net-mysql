@@ -17,11 +17,6 @@ services:
       - "5000:80"  
     depends_on:
       - mysql
-#    environment:
-#      - DB_SOURCE=mysql
-#      - DB_NAME=dbo
-#      - DB_USER=root
-#      - MYSQL_ROOT_PASSWORD=password
 
   mysql:
     image: pradeep34946/mysql:v1
