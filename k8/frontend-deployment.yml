@@ -18,4 +18,4 @@ spec:
            name: frontend
            env: 
             - name: BACKEND_API
-              value: k3d.devpracon.tech
+              value: my_app.devpracon.tech
