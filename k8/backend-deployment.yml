@@ -16,3 +16,5 @@ spec:
       containers:  
       - image: pradeep34946/backend:v3
         name: backend
+        ports:
+          - containerPort: 5000
