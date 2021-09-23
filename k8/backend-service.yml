@@ -6,9 +6,8 @@ metadata:
   name: backend-service
 spec:
   ports:
-    - port: 5000
-      targetPort: 80
-      protocol: TCP
+    - port: 80
+      targetPort: 5000
   selector:
     app: backend
-  type: ClusterIP
+  type: Loadbalancer
