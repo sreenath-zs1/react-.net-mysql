@@ -9,8 +9,7 @@ services:
     depends_on:
       - dotnet
     environment:
-      - REACT_APP_API_URL=http://k3d.devpracon.tech:5000/api/
-      - REACT_APP_PHOTOS_URL=http://k3d.devpracon.tech:5000/Photos/
+      - BACKEND_IP=k3d.devpracon.tech
   dotnet:
     build: ./asp.net
     container_name: DotNet
