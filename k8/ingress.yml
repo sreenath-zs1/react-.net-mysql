@@ -15,6 +15,14 @@ spec:
                 name: frontend-service
                 port:
                   number: 3000
+           
+          - path: /WeatherForecast
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-service
+                port:
+                  number: 5000
 
           - path: /api/
             pathType: Prefix
