@@ -16,7 +16,7 @@ spec:
                 port:
                   number: 3000
            
-          - path: /WeatherForecast
+          - path: /api/
             pathType: Prefix
             backend:
               service:
@@ -24,7 +24,7 @@ spec:
                 port:
                   number: 5000
 
-          - path: /api/
+          - path: /WeatherForecast
             pathType: Prefix
             backend:
               service:
