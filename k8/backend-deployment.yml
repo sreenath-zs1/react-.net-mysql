@@ -13,6 +13,6 @@ spec:
     spec:
       containers:  
       - name: backend
-        image: pradeep34946/backend:v3
+        image: pradeep34946/backend:k8s
         ports:
         - containerPort: 80
