@@ -15,4 +15,4 @@ spec:
       - name: backend
         image: pradeep34946/backend:v3
         ports:
-        - containerPort: 5000
+        - containerPort: 80
