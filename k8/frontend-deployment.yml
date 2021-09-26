@@ -14,7 +14,7 @@ spec:
         app: frontend
     spec:
       containers:  
-      - image: pradeep34946/frontend:v6
+      - image: pradeep34946/frontend:k8s
         name: frontend
         ports:
           - containerPort: 3000
