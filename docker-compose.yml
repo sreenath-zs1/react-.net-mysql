@@ -9,7 +9,7 @@ services:
     depends_on:
       - dotnet
     environment:
-      - BACKEND_IP=54.158.129.141
+      - BACKEND_IP=18.234.232.169
   dotnet:
     build: ./asp.net
     container_name: DotNet
