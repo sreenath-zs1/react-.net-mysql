@@ -19,7 +19,7 @@ services:
       - mysql
 
   mysql:
-    image: pradeep34946/mysql:v1
+    image: sreenathkk96/mysql:v1
     container_name: mysql
     ports:
       - "3306:3306"
